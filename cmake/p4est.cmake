@@ -25,6 +25,7 @@ set(P4EST_INCLUDE_DIRS ${P4EST_ROOT}/include)
 ExternalProject_Add(P4EST
 SOURCE_DIR ${PROJECT_SOURCE_DIR}/p4est
 CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${P4EST_ROOT} 
+           -Denable-file-deprecated=ON
            -Dmpi:BOOL=${mpi} 
            -Dopenmp:BOOL=${openmp}
            -DSC_ROOT:PATH=${SC_ROOT}
